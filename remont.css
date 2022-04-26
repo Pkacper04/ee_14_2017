@@ -1,0 +1,40 @@
+#menu1,#menu2,#menu3,#menu4,#menu5{
+    background-color: RGB(57,180,107);
+    color: white;
+    text-align: center;
+    font-size: 150%;
+    width: 20%;
+    height: 220px;
+    float:left;
+}
+
+#content{
+    height: 300px;
+    float:left;
+    width: 100%;
+}
+
+#stopka{
+    background-color: RGB(57,180,107);
+    color:white;
+    text-align: center;
+    font-size:150%;
+    width:100%;
+    float:left;
+}
+
+a{
+    color:white;
+}
+
+button{
+    background-color: green;
+    border: 1px solid green;
+    color:white;
+    font-weight: bold;
+    padding: 15px;
+}
+
+h1{
+    color: RGB(27,163,82);
+}
