@@ -4,6 +4,34 @@
     <meta charset="UTF-8">
     <title>Remonty mieszkań</title>
     <link rel="stylesheet" href="remont.css">
+
+    <script>
+        function Oblicz(){
+            var metry = document.getElementById("metry").value;
+            var przyciski = document.getElementsByName("plytki");
+
+            var radio = null;
+            for(var i=0;i<przyciski.length;i++)
+            {
+                if(przyciski[i].checked)
+                    var radio = przyciski[i].value;
+            }
+
+            var cena = 0;
+            if(radio == 1)
+            {
+                cena = metry * 70;
+            }
+            else{
+                cena = metry * 80;
+            }
+
+
+            document.getElementById("wynik").innerHTML = "Koszt kafelkowania: "+cena + " PLN";
+
+
+        }
+    </script>
 </head>
 <body>
     <section id="menu1">
@@ -27,9 +55,11 @@
         <p>powierzchnia w m<sup>2</sup></p>
         <input type="number" id="metry">
         <br><br>
-        <input type="radio" name="plytki"> Płytki 20 x 20 cm <br>
-        <input type="radio" name="plytki"> Płytki 25 x 12 cm <br><br>
-        <button>PRZELICZ</button>
+        <input type="radio" name="plytki" value = 1> Płytki 20 x 20 cm <br>
+        <input type="radio" name="plytki" value = 2> Płytki 25 x 12 cm <br><br>
+        <button onclick="Oblicz()">PRZELICZ</button>
+
+        <p id="wynik"></p>
     </section>
 
     <section id="stopka">
